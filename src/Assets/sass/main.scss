@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  color: #fff;
+  background-image: url(../Images/Cinema.jpeg)
+}
+.myScroll{
+    overflow-x: auto;
+   max-width: auto;
+    height: auto;
+    position: relative;
+    overflow-y: hidden;
+    white-space : "nowrap";
+    padding-top: 20;
+    margin-bottom: 20;
+}
+.opacs{
+    cursor: pointer;
+}
+.opacs:hover{
+    transition: opacity linear 100ms;
+    opacity: .8;
+}
+.myScroll::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(0,0,0,0);
+}
+
+.myScroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 15, 38, 0.9);
+  border-radius: 5px;
+} 
+.bg-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-height: 394px !important;
+  background-position: center center;
+}
+@media (max-width: 1024px) {
+  .bg-image {
+    background-attachment: scroll;
+  }
+}
+.display-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+.spinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.spinner:after {
+  content: ' ';
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid teal;
+  border-color: teal transparent teal transparent;
+  animation: spinner 1.2s linear infinite;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
