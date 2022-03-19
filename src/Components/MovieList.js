@@ -1,4 +1,4 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React from 'react'
 
@@ -19,13 +19,13 @@ const MovieList = (props) => {
      var  dots = (movies.Title.length > 35)?'...':'';
     var movs =   movies.Title.match(/.{1,22}/);
        var title = movs[0] + dots;
+       const image = movies.Poster;
+       console.log(image)
   return (
     <div style={{ display: "inline-block", padding: 3 }}>
       <Card className='opacs' elevation={2} spacing={2}>
-            <CardMedia className={classes.cardMedia}
-          image={movies.Poster}
-          style={{width: '230px', height: '130px'}}
-          />
+          <img src={image} style={{width: '230px', height: '130px'}}/>
+          
         <CardContent>
           <Typography align='center' variant='h6' color="textSecondary">
             {title}

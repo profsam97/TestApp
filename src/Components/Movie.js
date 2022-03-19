@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import { makeStyles } from '@mui/styles'
 import React from 'react'
 import MovieList from './MovieList'
@@ -13,7 +13,6 @@ const Movie = (props) => {
     const classes = useStyle()
     const movie = props.movie
     const category = props?.category;
-    console.log(category);
   return (
     <>
     {/* <Typography variant='h5' mt={1}>Actions</Typography> */}
